@@ -77,3 +77,4 @@ export const obtenerUnoMenosR2 = async (id_experimento) => {
         throw error;
     }
 };
+    
