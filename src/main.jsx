@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import ExperimentDetail from './pages/ExperimentDetail';
 import Logs from './pages/Logs';
 import ExperimentForm from './pages/ExperimentForm';
+import CargarDatosForm from './pages/CargarDatosForm';
 
 // Definición de rutas
 const router = createBrowserRouter([
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
       { path: '/', element: <Home /> },
       { path: '/experimento/:id', element: <ExperimentDetail /> },
       {path: '/experimento/crear', element: <ExperimentForm />},
-      { path: '/logs', element: <Logs /> }
+      { path: '/logs', element: <Logs /> },
+      {path: '/cargar-datos', element:<CargarDatosForm/>}
     ]
   }
 ]);

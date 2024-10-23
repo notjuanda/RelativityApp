@@ -13,7 +13,7 @@ export default function Navbar() {
         </div>
         <div className="hidden md:flex space-x-8">
             <Link
-            to="/dashboard"
+            to="/"
             className="hover:text-blue-400 text-sm font-medium"
             >
             Home / Dashboard
@@ -31,7 +31,7 @@ export default function Navbar() {
             Cargar Datos
             </Link>
             <Link
-            to="/ver-logs"
+            to="/logs"
             className="hover:text-blue-300 text-sm font-medium"
             >
             Ver Logs
