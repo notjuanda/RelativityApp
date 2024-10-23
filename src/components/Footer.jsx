@@ -1,89 +1,34 @@
 export default function Footer() {
     return (
-      <footer className="bg-gray-900 text-gray-400 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Carga de Datos */}
-            <div>
-              <h3 className="text-md font-semibold" style={{ color: '#0D92F4' }}>
-                Carga de Datos
-              </h3>
-              <ul className="mt-2 space-y-1">
-                <li>
-                  <a
-                    href="/cargar-datos"
-                    className="hover:underline"
-                    style={{ color: '#0D92F4' }}
-                  >
-                    Subir Archivos CSV / Excel
-                  </a>
-                </li>
-                <li>Formatos Soportados: CSV, XLSX, XLS</li>
-              </ul>
-            </div>
+      <footer className="bg-indigo-900 text-indigo-100 py-10 border-t border-indigo-800">
+        <div className="max-w-5xl mx-auto  px-0 flex items-center justify-between">
+          {/* Navegación */}
+          <nav className="flex space-x-6 text-indigo-300">
+            <a href="/" className="hover:text-white transition">
+              Home
+            </a>
+            <a href="https://github.com/notjuanda/RelativityApp" className="hover:text-white transition">
+              Github
+            </a>
+            <a href="/experimento/crear" className="hover:text-white transition">
+              Crear Experimento
+            </a>
+            <a href="/contact" className="hover:text-white transition">
+              Contacto
+            </a>
+          </nav>
   
-            {/* Información de Contacto */}
-            <div>
-              <h3 className="text-md font-semibold" style={{ color: '#0D92F4' }}>
-                Contacto
-              </h3>
-              <ul className="mt-2 space-y-1">
-                <li>
-                  Correo:{" "}
-                  <a
-                    href="mailto:contacto@relativityapp.com"
-                    className="hover:underline"
-                    style={{ color: '#0D92F4' }}
-                  >
-                    contacto@relativityapp.com
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/usuario/repositorio"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                    style={{ color: '#0D92F4' }}
-                  >
-                    Repositorio en GitHub
-                  </a>
-                </li>
-              </ul>
-            </div>
-  
-            {/* Links Útiles */}
-            <div>
-              <h3 className="text-md font-semibold" style={{ color: '#0D92F4' }}>
-                Links Útiles
-              </h3>
-              <ul className="mt-2 space-y-1">
-                <li>
-                  <a
-                    href="/licencia"
-                    className="hover:underline"
-                    style={{ color: '#0D92F4' }}
-                  >
-                    Licencia MIT
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/terminos"
-                    className="hover:underline"
-                    style={{ color: '#0D92F4' }}
-                  >
-                    Términos y Condiciones
-                  </a>
-                </li>
-              </ul>
-            </div>
+          {/* Nombre de la Página */}
+          <div className="text-center">
+            <h2 className=" font-extrabold tracking-wider" style={{fontSize:'20px'}}>
+              RelativityApp
+            </h2>
           </div>
   
-          {/* Créditos */}
-          <div className="mt-6 border-t border-gray-700 pt-2 text-center">
-            <p>© 2024 RelativityApp. Todos los derechos reservados.</p>
-          </div>
+          {/* Derechos Reservados */}
+          <p className="text-indigo-300 text-sm">
+            © 2024 RelativityApp. Todos los derechos reservados.
+          </p>
         </div>
       </footer>
     );

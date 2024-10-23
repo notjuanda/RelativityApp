@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow w-[1216px] mx-auto px-4 py-6">
+      <main className="flex-grow w-[1216px] mx-auto px-4 py-20">
         <Outlet /> {/* Aquí se renderizan las rutas */}
       </main>
       <Footer />

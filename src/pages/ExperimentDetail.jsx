@@ -217,10 +217,10 @@ const ExperimentDetail = () => {
                                     key={index}
                                     className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                                 >
-                                    <p className="text-sm font-bold text-indigo-600 uppercase tracking-wider">
+                                    <p className="text-sm font-extrabold text-indigo-600 uppercase tracking-wider">
                                         {item.label}
                                     </p>
-                                    <p className="mt-2 text-1xl font-semibold text-gray-800">
+                                    <p className="mt-2 font-semibold text-gray-800" style={{fontSize:'12px'}}>
                                         {item.value}
                                     </p>
                                 </div>

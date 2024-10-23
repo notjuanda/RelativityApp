@@ -39,7 +39,7 @@ const CargarDatosForm = () => {
 
     return (
         <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-md">
-            <h2 className="text-2xl font-bold mb-6" style={{ color: '#0D92F4' }}>
+            <h2 className="text-indigo-600 text-2xl font-extrabold mb-6" >
                 Subir Archivo CSV o Excel
             </h2>
             <form onSubmit={manejarEnvio}>
@@ -53,7 +53,7 @@ const CargarDatosForm = () => {
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-blue-500 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
+                    className="w-full bg-indigo-500 text-white font-medium py-2 px-4 rounded-md hover:bg-indigo-300 transition-colors"
                 >
                     Subir Archivo
                 </button>
