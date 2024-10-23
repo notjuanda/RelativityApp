@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Scatter } from 'react-chartjs-2';
 import { Chart as ChartJS, registerables } from 'chart.js';
 import { obtenerExperimentoPorID } from '../services/experimentService';
+import * as XLSX from 'xlsx';
 import { 
     obtenerDatosPorExperimento, 
     editarDato, 
@@ -93,6 +94,21 @@ const ExperimentDetail = () => {
         setError('Error al actualizar los datos.');
         }
     };
+    // Lógica para generar el archivo Excel
+    const handleDownloadExcel = () => {
+      const sheetData = datos.map((dato) => ({
+        X: dato.x,
+        Y: dato.y,
+        Sxx: Math.pow(dato.x, 2),
+        Syy: Math.pow(dato.y, 2),
+      }));
+
+      const ws = XLSX.utils.json_to_sheet(sheetData); // Crear hoja de cálculo
+      const wb = XLSX.utils.book_new(); // Crear libro de Excel
+      XLSX.utils.book_append_sheet(wb, ws, 'Resultados'); // Agregar hoja al libro
+
+      XLSX.writeFile(wb, `Experimento_${id}_Resultados.xlsx`); // Descargar el archivo
+    };
 
     const interpretarResultados = () => {
         if (!resultados) return '';
@@ -144,6 +160,14 @@ const ExperimentDetail = () => {
               <p className="text-center text-gray-500 italic mb-10">
                   {experimento.descripcion || 'Descripción del experimento'}
               </p>
+              <div className="flex justify-end mb-6">
+              <button
+                onClick={handleDownloadExcel}
+                className="bg-indigo-600 text-white px-4 py-2 rounded shadow hover:bg-indigo-700 transition"
+              >
+                Descargar Excel
+              </button>
+            </div>
   
               {sinDatos && (
                   <p className="text-center text-yellow-600 font-semibold mb-6">
