@@ -34,7 +34,7 @@ const ExperimentDetail = () => {
             setSinDatos(data.length === 0);
             setResultados(resultData);
         } catch (err) {
-            setError('Error al obtener los datos.');
+            setError('Error al obtener los datos.', err);
         } finally {
             setLoading(false);
         }
