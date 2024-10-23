@@ -8,6 +8,7 @@ import App from './App';
 import Home from './pages/Home';
 import ExperimentDetail from './pages/ExperimentDetail';
 import Logs from './pages/Logs';
+import ExperimentForm from './pages/ExperimentForm';
 
 // Definición de rutas
 const router = createBrowserRouter([
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <Home /> },
       { path: '/experimento/:id', element: <ExperimentDetail /> },
+      {path: '/experimento/crear', element: <ExperimentForm />},
       { path: '/logs', element: <Logs /> }
     ]
   }
