@@ -33,3 +33,14 @@ export const editarDato = async (id_dato, datos) => {
         throw error;
     }
 };
+
+// Eliminar un dato por ID
+export const eliminarDato = async (id_dato) => {
+    try {
+        const response = await api.delete(`/datos/${id_dato}`);
+        return response.data;
+    } catch (error) {
+        console.error(`Error al eliminar el dato con ID ${id_dato}:`, error);
+        throw error;
+    }
+};
